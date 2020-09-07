@@ -1,4 +1,7 @@
 """
+Author: Amanda Dewyer
+Date: September 7th 2020
+
 File that contains all parameters for
 the basis set basis set selector.
 """
