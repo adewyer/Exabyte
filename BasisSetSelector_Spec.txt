@@ -1,0 +1,34 @@
+Amanda Dewyer
+Basis Set Selector ReWoTe
+EXABYTE.io Interview
+
+Overview:
+The aim of this project is to develop a python package that allows for the automated selection of an appropriate basis set for quantum chemical calculations based on a user defined molecule. 
+
+Requirements
+1.	Automatically identify a basis set for a user defined chemical system within a given tolerance level. 
+2.	Utilize previously published or high level (couple cluster) energies as reference data.
+3.	Have the ability to calculate a structure's energy using various basis sets and converge on a reference point energy.
+4.	 It should be clear that the ability to expand this to other properties is straightforward and easy to implement in a future version of this code.
+
+Expectations
+1.	Modular and object oriented programming using python.
+2.	Identify a basis set correctly for molecules ranging in size from 2-20 atoms.
+3.	Basis set demonstration should cover at least 5 unique structures with varying size. 
+4.	The code will work for a variety of tolerance levels and return the most cost effective basis set. (i.e. larger tolerance range returns lower accuracy, more cost efficient, basis set.)
+
+Timeline
+-	The project should take approximately 5 days to code.
+-	Demonstration of the code will be given on September 16th 2020.
+
+User Story
+The user should be able to pass the code the following parameters and in return be given a basis set that satisfies the criteria.
+1.	Molecular structure including charge and multiplicity
+2.	Reference energy (property value)
+3.	Level of theory (HF, DFT functional, etc.) for use in calculating properties with various basis sets.
+4.	Tolerance threshold for basis set selection
+
+Notes
+-	If time permits I would like to demonstrate/implement a simple heuristics based basis set selector as well. It would work for small main group element molecules as a demonstration of the idea.
+-	The code will be  written to work with NWChem.
+
