@@ -23,15 +23,15 @@ class Molecule():
     Class contains properties of molecule input by user.
     """
 
-    def __init__(self, charge, mult, structure)
+    def __init__(self, charge, mult, structure):
         self.charge = charge
         self.mult = mult
         self.structure = structure
 
-    def get_atoms(self):
+    #def get_atoms(self):
         #strip structure to get only atoms
 
-    def get_coords(self):
+    #def get_coords(self):
         #strip structure to get only xyz cordinates
 
     def get_charge(self):
@@ -44,8 +44,8 @@ class Molecule():
         charge = self.get_charge()
         mult = self.get_mult()
 
-def main():
-   mol = Molecule(0, 1, )
-   
+    def main():
+        print("mol test")
+       #mol = Molecule(0, 1, )
 
-main()        
+    main()        

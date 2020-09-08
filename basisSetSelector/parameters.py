@@ -24,18 +24,18 @@ class Parameters:
         
         # User input file
         self.input_file = file
-        
         self.par = {
             # General calculation & structure parameters
-            'job_title' : '',
+            'molecule_name' : '',
+            'job_summary' : '',
             'structure' : [],
             'charge' : 0,
             'multiplicity' : 1,
 
             # Basis set selector parameters
             'basis_set_selector' : 'Specific',
-            'qc_method' : 'dft'
-            'dft_method' : 'b3lyp'
+            'qc_method' : 'dft',
+            'dft_method' : 'b3lyp',
             'integral' : '', # do we need this with nwchem
             'opt_threshold' : '', # optimization scf threshold
             # 'model_phase' : 'testing',
@@ -67,7 +67,7 @@ class Parameters:
             raise IOError(err)
         for key in user_parameters:
             if key in self.par:
-                self.par[key] = user_parameter[key]
+                self.par[key] = user_parameters[key]
             else:
                 err = '{} is not a valid parameter'
                 print(err.format(key))

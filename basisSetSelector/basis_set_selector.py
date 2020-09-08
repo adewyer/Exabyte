@@ -15,7 +15,7 @@ import logging
 import basis_sets as basis
 
 def main():
-    
+   
     try:
         input_file = sys.argv[1]
     except IndexError:
