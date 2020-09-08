@@ -17,10 +17,20 @@ and specific basis set selector options.
 import sys
 import os
 import logging
+import numpy as np
 
 class Molecule():
     """
     Class contains properties of molecule input by user.
+
+    def get_geom(self):
+        if len(self.structure) == 0:
+            # this will only work if Pybel is installed correctly
+            self.obmol, self.structure, self.bond = cheminfo.generate_3d_structure(self.smiles)
+        self.natom = len(self.structure) // 4
+        self.structure = np.reshape(self.structure, (self.natom, 4))
+        self.atom = self.structure[:, 0]
+        self.geom = self.structure[:, 1:4].astype(float)
     """
 
     def __init__(self, charge, mult, structure):
@@ -28,11 +38,15 @@ class Molecule():
         self.mult = mult
         self.structure = structure
 
-    #def get_atoms(self):
-        #strip structure to get only atoms
-
-    #def get_coords(self):
-        #strip structure to get only xyz cordinates
+    def get_atoms(self):
+        self.natoms = len(self.structure) // 4
+        self.atoms = self.structure[0:len(self.structure):4]
+        return self.natoms, self.atoms
+    
+    def get_coords(self):
+        structure = self.reshape_geom()
+        self.coords = structure[:, 1:4].astype(float)
+        return self.coords
 
     def get_charge(self):
         return self.charge
@@ -44,8 +58,19 @@ class Molecule():
         charge = self.get_charge()
         mult = self.get_mult()
 
-    def main():
-        print("mol test")
-       #mol = Molecule(0, 1, )
+    def reshape_geom(self):
+        natoms, atoms = self.get_atoms()
+        self.structure = np.reshape(self.structure, (natoms, 4))
+        return self.structure
 
-    main()        
+def main():
+    print("mol test")
+    structure = ["O", 0.00000000, 0.00000000, 0.00000000, "H", 0.00000000, 1.43042809, -1.10715266, "H", 0.00000000, -1.43042809, -1.10715266] 
+    mol = Molecule(0, 1, structure)
+    print(mol.structure)
+    print(mol.get_atoms())
+    print(mol.get_coords())
+    print(mol.get_charge())
+    print(mol.get_mult())
+    print(mol.structure)
+main()        
