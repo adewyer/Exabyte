@@ -33,12 +33,12 @@ class Parameters:
             'multiplicity' : 1,
 
             # Basis set selector parameters
-            'basis_set_selector' : '',
+            'basis_set_selector' : 'Specific',
             'qc_method' : 'dft'
             'dft_method' : 'b3lyp'
             'integral' : '', # do we need this with nwchem
             'opt_threshold' : '', # optimization scf threshold
-            'model_phase' : 'testing',
+            # 'model_phase' : 'testing',
             'reference_type' : 'energy',
             'reference_value' : '', # Units need to line up with output
             'reference_value_method' : 'CCSD(T)',

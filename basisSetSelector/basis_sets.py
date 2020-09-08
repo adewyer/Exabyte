@@ -13,7 +13,6 @@ by the automated basis set selector package
 polarization = '*'
 popleDiffuse = '+'
 popleBasis = {}
-pople = 'G'
 
 popleBasis['3-21G'] = '3-21'
 popleBasis['6-31G'] = '6-31'
@@ -38,3 +37,26 @@ dunningBasis['cc-pV6Z'] = 'cc-pV6Z'
 # Karlsruhe (def2-NVP type basis)
 # CBS (complete basis set type)
 # STO (minimal basis sets)
+
+def generate_basis(basisType, basis, polarization='', diffuse=''):
+    if basisType == 'pople':
+        basis = basis
+        basisSet = popleBasis[basis] + diffuse + 'G' + polarization
+        print(basisSet)
+    elif basisType == 'dunning':
+        basis = basis
+        basisSet = diffuse + dunningBasis[basis]
+        print(basisSet)
+    else:
+        print('Invalid basis set parameters for basis set generation')
+        return None
+
+    return basisSet
+
+def main():
+    # testing
+    polar = polarization * 2
+    generate_basis('pople', '3-21G', polar)
+    generate_basis('dunning', 'cc-pVDZ', '', dunningDiffuse)
+
+main()
