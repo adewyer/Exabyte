@@ -22,15 +22,6 @@ import numpy as np
 class Molecule():
     """
     Class contains properties of molecule input by user.
-
-    def get_geom(self):
-        if len(self.structure) == 0:
-            # this will only work if Pybel is installed correctly
-            self.obmol, self.structure, self.bond = cheminfo.generate_3d_structure(self.smiles)
-        self.natom = len(self.structure) // 4
-        self.structure = np.reshape(self.structure, (self.natom, 4))
-        self.atom = self.structure[:, 0]
-        self.geom = self.structure[:, 1:4].astype(float)
     """
 
     def __init__(self, charge, mult, structure):
