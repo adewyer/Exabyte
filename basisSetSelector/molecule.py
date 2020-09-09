@@ -35,7 +35,7 @@ class Molecule():
         return self.natoms, self.atoms
     
     def get_coords(self):
-        structure = self.reshape_geom()
+        structure = reshape_geom(self, self.structure)
         self.coords = structure[:, 1:4].astype(float)
         return self.coords
 

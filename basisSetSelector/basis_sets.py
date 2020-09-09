@@ -59,4 +59,4 @@ def main():
     generate_basis('pople', '3-21G', polar)
     generate_basis('dunning', 'cc-pVDZ', '', dunningDiffuse)
 
-main()
+#main()

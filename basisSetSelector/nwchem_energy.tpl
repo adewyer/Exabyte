@@ -1,5 +1,5 @@
  start {molname} 
- title {description}
+ title "{description}"
  charge {charge} 
 
  geometry units au  

@@ -25,14 +25,11 @@ def main():
         print("Invalid input file, please try again.")
         sys.exit(-1)
 
-    print(input_file)
-
-    if not os.path.exists('calcs'):
-        os.makedirs('calcs')
-
     param = parameters.Parameters(input_file)
-    logging.basicConfig(filename='basisSetSelector.log', level=logging.INFO)
+    
+    logging.basicConfig(filename='output.log', level=logging.INFO)
     logging.info("Starting basis set selection.")
+    logging.info("{} file supplied as input.".format(input_file))
     logging.info("Method for basis set selection set to {}".format(param.par['basis_set_selector']))
 
     if param.par['basis_set_selector'] == 'General':
@@ -47,12 +44,18 @@ def main():
         sys.exit(-1)
     
     # test works to connect to basis sets module
-    basis.generate_basis('pople', '6-31G', '++', '**')
-
-    # test molecule class
+    basisSet = basis.generate_basis('pople', '3-21G', '+', '*')
+    print(basis)
+    # test molecule
     mol = molecule.Molecule(param.par['charge'], param.par['multiplicity'], param.par['structure'])
-    print(mol.get_atoms())
+    print(mol.get_atoms()) 
+    print(mol.get_coords()) 
+    print(mol.get_charge())
+    print(mol.get_mult())
 
-    # test nwchem class 
-    
-main()    
+    # test nwchem
+    nw = nwchem.Nwchem(param)
+    print(nw.get_nwchem_args(basisSet))
+    nw.write_nwchem_input()
+
+main()

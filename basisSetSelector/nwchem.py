@@ -57,9 +57,7 @@ class Nwchem:
         # TO DO - GET BASIS SET FOR CALC 
         bas = '3-21G'
         kwargs = self.get_nwchem_args(bas)
-        print(kwargs)
         name = kwargs.get('molname')
-        print(name)
         job = name + '_' + bas
 
         # TO DO TURN GEOM INTO A STRING
@@ -82,7 +80,7 @@ class Nwchem:
             inp.write(nwChem_input)
         logging.info("NWChem input file created for {}.".format(job))
 
-        self.nwchem_submit(job)
+        # self.nwchem_submit(job)
 
         return 0
 
@@ -92,8 +90,8 @@ class Nwchem:
         cmd = 'nwchem ' + job + '.inp' + ' >> ' + job + '.out'
         nwchemRun = os.popen(cmd)
 
-def main():
-    params = Parameters('test.json')
-    nwChem = Nwchem(param=params)
-    nwChem.write_nwchem_input()
-main()         
+#def main():
+#    params = Parameters('test.json')
+#    nwChem = Nwchem(param=params)
+#    nwChem.write_nwchem_input()
+#main()         
