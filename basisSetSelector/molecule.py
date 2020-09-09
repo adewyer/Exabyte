@@ -49,11 +49,12 @@ class Molecule():
         charge = self.get_charge()
         mult = self.get_mult()
 
-    def reshape_geom(self):
-        natoms, atoms = self.get_atoms()
-        self.structure = np.reshape(self.structure, (natoms, 4))
-        return self.structure
+def reshape_geom(self, structure):
+    natoms = len(structure) // 4
+    self.structure = np.reshape(self.structure, (natoms, 4))
+    return self.structure
 
+"""
 def main():
     print("mol test")
     structure = ["O", 0.00000000, 0.00000000, 0.00000000, "H", 0.00000000, 1.43042809, -1.10715266, "H", 0.00000000, -1.43042809, -1.10715266] 
@@ -64,4 +65,5 @@ def main():
     print(mol.get_charge())
     print(mol.get_mult())
     print(mol.structure)
-main()        
+main()
+"""        

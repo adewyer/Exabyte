@@ -40,56 +40,60 @@ class Nwchem:
         #parse structure into geom
 
         kwargs = {
-            'molname' : self.molname,
+            'molname': self.molname,
             'title': self.jobSummary,
             'charge': self.charge,
-            'geom': geom,
             'basis': basisSet,
-            'functional': self.dft_method,
+            'functional': self.dft,
             'mult': self.mult,
             'thresh': self.optThreshold
         }
+       
+        return kwargs
 
-    def qc_single_point(self):
+    def write_nwchem_input(self):
         # Create single point calculation for NWChem and run it.
 
         # TO DO - GET BASIS SET FOR CALC 
         bas = '3-21G'
         kwargs = self.get_nwchem_args(bas)
-        job = kwargs['molname'] + '_' + bas
+        print(kwargs)
+        name = kwargs.get('molname')
+        print(name)
+        job = name + '_' + bas
 
-        #template file = ____
-        #open template
-        template = template.format(molecule=kwargs['molname'],
-                                   calc_summary=kwargs['title'],
-                                   charge=self.charge,
-                                   geom='',  # need to fill in
-                                   atom='*',
-                                   basis=bas,
-                                   functional=kwargs['functional'],
-                                   mult=self.mult,
-                                   optThresh=kwargs['thresh'])
-        #write job input files
-        #close file
+        # TO DO TURN GEOM INTO A STRING
+        geometry = mol.reshape_geom(self, self.structure)
 
-        #submite file
+        #with open(pkg_resources.resource_filename('templates', 'nwchem_energy.tpl')) as inpFile:
+        with open('nwchem_energy.tpl', 'r') as inpFile:
+           self.inpFile = inpFile.read()
+
+        nwChem_input = self.inpFile.format(molname=name,
+                                           description=kwargs.get('title'),
+                                           charge=self.charge,
+                                           structure=geometry,
+                                           basis=bas,
+                                           functional=kwargs.get('functional'),
+                                           mult=self.mult,
+                                           method='dft')
+
+        with open(job + '.inp', 'w') as inp:
+            inp.write(nwChem_input)
+        logging.info("NWChem input file created for {}.".format(job))
+
+        self.nwchem_submit(job)
+
+        return 0
+
 
     def nwchem_submit(self, job):
-        #nwFile = 'nwchemSubmit.sub'
-        #fi = open(nwFile, 'w')
+        # submite nwchem calculation to local machine
         cmd = 'nwchem ' + job + '.inp' + ' >> ' + job + '.out'
-        #fi.write('#!/bin/bash\n' + cmd)
-        #fi.close()
-        print(cmd)
-        #command1 = 'chmod u+x ' + nwFile
-        #command2 = './' + nwFile
-        #process1 = subprocess.Popen(command1, shell=False, stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
-        #process2 = subprocess.Popen(command2, shell=False, stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
         nwchemRun = os.popen(cmd)
 
 def main():
     params = Parameters('test.json')
     nwChem = Nwchem(param=params)
-    nwChem.nwchem_submit('test')
-
+    nwChem.write_nwchem_input()
 main()         
