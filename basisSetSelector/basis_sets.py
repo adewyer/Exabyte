@@ -38,7 +38,7 @@ dunningBasis['cc-pV6Z'] = 'cc-pV6Z'
 # CBS (complete basis set type)
 # STO (minimal basis sets)
 
-def generate_basis(basisType, basis, polarization='', diffuse=''):
+def generate_single_basis(basisType, basis, polarization='', diffuse=''):
     if basisType == 'pople':
         basis = basis
         basisSet = popleBasis[basis] + diffuse + 'G' + polarization
@@ -53,10 +53,34 @@ def generate_basis(basisType, basis, polarization='', diffuse=''):
 
     return basisSet
 
+def create_basis_list():
+    basisSets = []
+    # Pople basis sets
+    polarizationOptions = ['', polarization, 2 * polarization]
+    diffuseOptions = ['', popleDiffuse, 2 * popleDiffuse]
+    dunningOptions = ['', dunningDiffuse]
+    for key, value in popleBasis.items():
+        for pol in polarizationOptions:
+            for dif in diffuseOptions:
+                basis = value + dif + 'G' + pol
+                print(basis)
+                basisSets.append(basis)
+
+    for key, value in dunningBasis.items():
+        for option in dunningOptions:
+            basis = option + value
+            print(basis)
+            basisSets.append(basis)
+
+    return basisSets
+
+"""
 def main():
     # testing
     polar = polarization * 2
     generate_basis('pople', '3-21G', polar)
     generate_basis('dunning', 'cc-pVDZ', '', dunningDiffuse)
-
-#main()
+    basis = create_basis_list()
+    print(basis)
+main()
+"""

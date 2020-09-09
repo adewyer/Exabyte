@@ -51,8 +51,8 @@ class Molecule():
 
 def reshape_geom(self, structure):
     natoms = len(structure) // 4
-    self.structure = np.reshape(self.structure, (natoms, 4))
-    return self.structure
+    formattedStructure = np.reshape(self.structure, (natoms, 4))
+    return formattedStructure
 
 """
 def main():

@@ -25,6 +25,9 @@ def main():
         print("Invalid input file, please try again.")
         sys.exit(-1)
 
+    if not os.path.exists('singlePoints'):
+        os.makedirs('singlePoints')
+
     param = parameters.Parameters(input_file)
     
     logging.basicConfig(filename='output.log', level=logging.INFO)
@@ -42,7 +45,17 @@ def main():
         logging.info("Method for basis set selection is invalid, method should be either 'General' or 'Specific'")
         print("Invalid parameter input for method selection, please try again.")
         sys.exit(-1)
-    
+
+    # test nwchem
+    basisSets = basis.create_basis_list()
+    print(basisSets)
+    nw = nwchem.Nwchem(param)
+    for basisSet in basisSets:
+        print(nw.get_nwchem_args(basisSet))
+        nw.write_nwchem_input(basisSet)
+
+main()
+"""
     # test works to connect to basis sets module
     basisSet = basis.generate_basis('pople', '3-21G', '+', '*')
     print(basis)
@@ -52,10 +65,4 @@ def main():
     print(mol.get_coords()) 
     print(mol.get_charge())
     print(mol.get_mult())
-
-    # test nwchem
-    nw = nwchem.Nwchem(param)
-    print(nw.get_nwchem_args(basisSet))
-    nw.write_nwchem_input()
-
-main()
+"""
