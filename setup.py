@@ -8,14 +8,14 @@ python setup.py install
 from setuptools import setup, find_packages
 
 setup(
-    name = "basis_set_selector",
+    name = "basis_selector",
     version = "1.0",
     packages = find_packages(),
     package_data={'templates':[
         'nwchem_energy.tpl']},
     include_package_data=True,
     entry_points={'console_scripts':[
-        'bss = basisSetSelector.bss:main',
+        'bss = basis_selector.bss:main',
         ]},
     install_requires=['numpy'],
     

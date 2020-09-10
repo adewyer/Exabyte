@@ -16,6 +16,7 @@ class Parameters:
     default settings and redefines parameters
     to user chosen values when applicable."
     """
+
     def __init__(self, file=None):
         """
         Initialize all parameter variables and read in 
@@ -27,7 +28,7 @@ class Parameters:
         self.par = {
             # General calculation & structure parameters
             'molecule_name' : '',
-            'job_summary' : '',
+            'job_description' : '',
             'structure' : [],
             'charge' : 0,
             'multiplicity' : 1,
@@ -36,13 +37,12 @@ class Parameters:
             'basis_set_selector' : 'Specific',
             'qc_method' : 'dft',
             'dft_method' : 'b3lyp',
-            'integral' : '', # do we need this with nwchem
             'opt_threshold' : '', # optimization scf threshold
             # 'model_phase' : 'testing',
             'reference_type' : 'energy',
             'reference_value' : '', # Units need to line up with output
             'reference_value_method' : 'CCSD(T)',
-            'selector_threshold' : ''  # Threshold should be entered as a float, i.e. 5.0 = 5% tolerance
+            'property_threshold' : ''  # Threshold should be entered as a float, i.e. 5.0 = 5% tolerance
             }
 
         # Reading parameter file functions
@@ -72,9 +72,11 @@ class Parameters:
                 err = '{} is not a valid parameter'
                 print(err.format(key))
 
+    
     def print_parameters(self):
         """
         Function that creates a string of all parameters.
+        Generally used for testing purposes.
         """
         parameters = ''
         for key in self.par:
