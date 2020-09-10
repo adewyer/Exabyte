@@ -10,13 +10,13 @@ by the automated basis set selector package
 # X = primitive gaussians defining core electrons
 # Y & Z = primitive gaussians defining valence electons
 
-polarization = '*'
+polarization = 's'
 popleDiffuse = '+'
 popleBasis = {}
 
-popleBasis['3-21G'] = '3-21'
-popleBasis['6-31G'] = '6-31'
-popleBasis['6-211G'] = '6-311'
+popleBasis['3-21g'] = '3-21'
+popleBasis['6-31g'] = '6-31'
+popleBasis['6-211g'] = '6-311'
 
 # Dunning Basis Sets (cc-pVNZ type basis)
 # cc-p = correlation consistent polarized
@@ -27,11 +27,12 @@ popleBasis['6-211G'] = '6-311'
 dunningDiffuse = 'aug-'
 dunningBasis = {}
 
-dunningBasis['cc-pVDZ'] = 'cc-pVDZ' 
-dunningBasis['cc-pVTZ'] = 'cc-pVTZ' 
-dunningBasis['cc-pVQZ'] = 'cc-pVQZ' 
-dunningBasis['cc-pV5Z'] = 'cc-pV5Z' 
-dunningBasis['cc-pV6Z'] = 'cc-pV6Z'
+dunningBasis['cc-pvdz'] = 'cc-pvdz' 
+dunningBasis['cc-pvtz'] = 'cc-pvtz' 
+dunningBasis['cc-pvqz'] = 'cc-pvqz' 
+# commented out 5z and 6z for demo due to time for calculations to run w/ aug-
+# dunningBasis['cc-pv5z'] = 'cc-pv5z'  
+# dunningBasis['cc-pv6z'] = 'cc-pv6z'
 
 # Other basis set types to add:
 # Karlsruhe (def2-NVP type basis)
@@ -41,12 +42,10 @@ dunningBasis['cc-pV6Z'] = 'cc-pV6Z'
 def generate_single_basis(basisType, basis, polarization='', diffuse=''):
     if basisType == 'pople':
         basis = basis
-        basisSet = popleBasis[basis] + diffuse + 'G' + polarization
-        print(basisSet)
+        basisSet = popleBasis[basis] + diffuse + 'g' + polarization
     elif basisType == 'dunning':
         basis = basis
         basisSet = diffuse + dunningBasis[basis]
-        print(basisSet)
     else:
         print('Invalid basis set parameters for basis set generation')
         return None
@@ -62,14 +61,12 @@ def create_basis_list():
     for key, value in popleBasis.items():
         for pol in polarizationOptions:
             for dif in diffuseOptions:
-                basis = value + dif + 'G' + pol
-                print(basis)
+                basis = value + dif + 'g' + pol
                 basisSets.append(basis)
 
     for key, value in dunningBasis.items():
         for option in dunningOptions:
             basis = option + value
-            print(basis)
             basisSets.append(basis)
 
     return basisSets

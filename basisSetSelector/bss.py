@@ -9,13 +9,16 @@ Functionality includes:
 3. Returns optimal basis set for user, based on input.
 """
 
+import time
 import sys
 import os
 import logging
-import basis_sets as basis
-import molecule
-import nwchem
-import parameters
+from basisSetSelector import basis_sets as basis
+from basisSetSelector import molecule
+from basisSetSelector import nwchem
+from basisSetSelector import parameters
+from basisSetSelector import basis_library_nwchem as nwlib
+from basisSetSelector import propertyCheck
 
 def main():
    
@@ -46,14 +49,38 @@ def main():
         print("Invalid parameter input for method selection, please try again.")
         sys.exit(-1)
 
-    # test nwchem
     basisSets = basis.create_basis_list()
-    print(basisSets)
+    allNwchemBasis = nwlib.get_all_nwchem_basis()
+    for bas in basisSets:
+        if bas not in allNwchemBasis:
+            basisSets.remove(bas)
     nw = nwchem.Nwchem(param)
+    jobs = []
+    energies = {}
     for basisSet in basisSets:
-        print(nw.get_nwchem_args(basisSet))
-        nw.write_nwchem_input(basisSet)
+        print(basisSet)
+        job = nw.write_nwchem_input(basisSet)
+        jobs.append(job)
 
+    status = 1
+    for i, job in enumerate(jobs):
+        if status == 1:
+            print("submitting {}.inp".format(job))
+            nw.nwchem_submit(job)
+            status = 0
+            time.sleep(3) 
+        while status == 0:
+            status = nw.check_nwchem(job)
+        energy = nw.get_nwchem_energy(job) 
+        energies[job] = energy
+    print(energies)
+    print(type(energies))
+    #need to get code to send dictionary
+    acceptableBasisSets = propertyCheck.compare_property(param.par['selector_threshold'], energies, param.par['reference_value'])
+    print("The following basis sets produce energies within {} of {}".format(param.par['selector_threshold'], param.par['reference_value']))
+    for b in acceptableBasisSets:
+        print("\t{}".format(b))
+       
 main()
 """
     # test works to connect to basis sets module

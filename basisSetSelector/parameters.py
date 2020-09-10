@@ -42,7 +42,7 @@ class Parameters:
             'reference_type' : 'energy',
             'reference_value' : '', # Units need to line up with output
             'reference_value_method' : 'CCSD(T)',
-            'selector_threshold' : ''
+            'selector_threshold' : ''  # Threshold should be entered as a float, i.e. 5.0 = 5% tolerance
             }
 
         # Reading parameter file functions
