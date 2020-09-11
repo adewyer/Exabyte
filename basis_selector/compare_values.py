@@ -41,7 +41,8 @@ def print_acceptable_basis(basis, molecule, threshold):
     fi = open('acceptableBasisSets.log', 'w')
     fi.write("Basis sets that fall within {} of the reference for {}:".format(threshold, molecule))
     for key, value in basis.items():
-        fi.write("{}\n".format(key))
+        basis = key[4::]
+        fi.write("{}\n".format(basis))
     fi.close()
     return 0
 
