@@ -30,10 +30,10 @@ class Molecule():
     3. multiplicity
     """
 
-    def __init__(self, charge, mult, xyz_structure):
+    def __init__(self, charge, mult, xyzStructure):
         self.charge = charge
         self.mult = mult
-        self.xyz_structure = xyz_structure
+        self.xyzStructure = xyzStructure
 
     def get_atoms(self):
         """
@@ -47,8 +47,8 @@ class Molecule():
         Returns 3 (natoms), ["O", "H", "H"] (atoms)
         """
 
-        self.natoms = len(self.xyz_structure) // 4
-        self.atoms = self.xyz_structure[0:len(self.xyz_structure):4]
+        self.natoms = len(self.xyzStructure) // 4
+        self.atoms = self.xyzStructure[0:len(self.xyzStructure):4]
 
         return self.natoms, self.atoms
     
@@ -58,7 +58,7 @@ class Molecule():
         atoms element label.
         """
 
-        formattedXYZ = reshape_geom(self, self.xyz_structure)
+        formattedXYZ = reshape_geom(self, self.xyzStructure)
         self.coords = formattedXYZ[:, 1:4].astype(float)
 
         return self.coords

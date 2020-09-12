@@ -32,7 +32,7 @@ class Nwchem:
         self.jobDescription = param.par['job_description']
         self.charge = param.par['charge']
         self.mult = param.par['multiplicity']
-        self.qc_method = param.par['qc_method']  # Default set to DFT
+        self.qcMethod = param.par['qc_method']  # Default set to DFT
         self.dft = param.par['dft_method']  # Default set to B3LYP
         self.optThreshold = param.par['opt_threshold']
         self.refType = param.par['reference_type']
@@ -88,19 +88,19 @@ class Nwchem:
         with open(nwChemInpFi, 'r') as f:
             self.nwChemInpFi = f.read()   
 
-        nwChem_input = self.nwChemInpFi.format(molname=calcName,
+        nwChemInput = self.nwChemInpFi.format(molname=calcName,
                                         description=kwargs.get('title'),
                                         charge=self.charge,
                                         structure=formattedGeom,
                                         basis=basis,
                                         functional=kwargs.get('functional'),
                                         mult=self.mult,
-                                        method=self.qc_method)
+                                        method=self.qcMethod)
 
         # Creation of input files inside of the singlePoints dir.
         # SinglePoints Dir is where all single point calculations are stored
-        with open('./singlePoints/' + calcName + '.inp', 'w') as nwChemInp:
-            nwChemInp.write(nwChem_input)
+        with open('./singlePoints/' + calcName + '.inp', 'w') as nwChemFile:
+            nwChemFile.write(nwChemInput)
         logging.info("NWChem input file created for {}.".format(calcName))
 
         return calcName

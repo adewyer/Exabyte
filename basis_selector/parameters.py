@@ -24,7 +24,7 @@ class Parameters:
         """
         
         # User input file
-        self.input_file = file
+        self.inputFile = file
         self.par = {
             # General calculation & structure parameters
             'molecule_name' : '',
@@ -46,7 +46,7 @@ class Parameters:
             }
 
         # Reading parameter file functions
-        if self.input_file is not None:
+        if self.inputFile is not None:
             self.read_user_input()  # Overwrite any paramters defined by user
 
     def read_user_input(self):
@@ -56,18 +56,18 @@ class Parameters:
         dictionary.
         """
         try:
-            with open(self.input_file) as json_input:
+            with open(self.inputFile) as json_input:
                 try:
-                    user_parameters = json.load(json_input)
+                    userParameters = json.load(json_input)
                 except ValueError:
                     err = 'Input .json file contains an error.'
                     raise ValueError(err)
         except IOError:
-            err = 'The .json input file ({}) does not exist'.format(self.input_file)
+            err = 'The .json input file ({}) does not exist'.format(self.inputFile)
             raise IOError(err)
-        for key in user_parameters:
+        for key in userParameters:
             if key in self.par:
-                self.par[key] = user_parameters[key]
+                self.par[key] = userParameters[key]
             else:
                 err = '{} is not a valid parameter'
                 print(err.format(key))
