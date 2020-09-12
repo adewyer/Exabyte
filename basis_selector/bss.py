@@ -13,11 +13,11 @@ import sys
 import os
 import logging
 import time
-from basis_selector import basis_sets as b
+from basis_selector import basis_sets as bs
 from basis_selector import molecule
 from basis_selector import nwchem
 from basis_selector import parameters
-from basis_selector import basis_library_nwchem as nwlib
+from basis_selector import basis_library as lib
 from basis_selector import compare_values
 
 def main():
@@ -43,13 +43,13 @@ def main():
                                                                                  param.par['reference_value'],
                                                                                  param.par['property_threshold']))
     # List of all available NWChem basis sets.
-    allNwchemBasis = nwlib.get_all_nwchem_basis()
+    allNwchemBasis = lib.get_nwchem_basis_library()
     # Create list of possible pople & dunning basis sets for testing.
-    basisSets = b.create_basis_list()
+    basisSets = bs.create_basis_list()
     # Check to see if basis sets are available in NWChem software.
-    for bas in basisSets:
-        if bas not in allNwchemBasis:
-            basisSets.remove(bas)
+    for basis in basisSets:
+        if basis not in allNwchemBasis:
+            basisSets.remove(basis)
 
     # Create NWChem object for use in quantum chemical calculations.
     nw = nwchem.Nwchem(param)
