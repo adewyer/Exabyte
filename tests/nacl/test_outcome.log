@@ -1,0 +1,15 @@
+energy reference value for nacl = -621.71568581
+nacl_3-21g energy = 18.4881, ratio = -0.0297
+nacl_3-21++g energy = 18.5265, ratio = -0.0298
+nacl_6-31g energy = 21.6376, ratio = -0.0348
+nacl_6-31+g energy = 21.6455, ratio = -0.0348
+nacl_6-31++g energy = 21.6455, ratio = -0.0348
+nacl_6-311g energy = 21.6958, ratio = -0.0349
+nacl_6-311+g energy = 21.6965, ratio = -0.0349
+nacl_6-311++g energy = 21.6965, ratio = -0.0349
+nacl_cc-pvdz energy = 21.7419, ratio = -0.0350
+nacl_aug-cc-pvdz energy = 21.7569, ratio = -0.0350
+nacl_cc-pvtz energy = 21.7999, ratio = -0.0351
+nacl_aug-cc-pvtz energy = 21.8048, ratio = -0.0351
+nacl_cc-pvqz energy = 21.8227, ratio = -0.0351
+nacl_aug-cc-pvqz energy = 21.8241, ratio = -0.0351

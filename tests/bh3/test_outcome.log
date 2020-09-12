@@ -1,0 +1,14 @@
+energy reference value for bh3 = -26.54842
+bh3_3-21g energy = 25.0739, ratio = -0.9445
+bh3_3-21++g energy = 25.0750, ratio = -0.9445
+bh3_6-31g energy = 25.2369, ratio = -0.9506
+bh3_6-31+g energy = 25.2388, ratio = -0.9507
+bh3_6-31++g energy = 25.2410, ratio = -0.9508
+bh3_6-311g energy = 25.3099, ratio = -0.9533
+bh3_6-311+g energy = 25.3102, ratio = -0.9534
+bh3_6-311++g energy = 25.3104, ratio = -0.9534
+bh3_cc-pvdz energy = 25.2134, ratio = -0.9497
+bh3_aug-cc-pvdz energy = 25.2369, ratio = -0.9506
+bh3_cc-pvtz energy = 25.3241, ratio = -0.9539
+bh3_aug-cc-pvtz energy = 25.3254, ratio = -0.9539
+bh3_cc-pvqz energy = 25.3300, ratio = -0.9541

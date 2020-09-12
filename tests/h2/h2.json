@@ -1,0 +1,15 @@
+{
+    "molecule_name": "h2",
+    "job_description": "test case",
+    "charge": 0,
+    "multiplicity": 1,
+    "basis_set_selector": "Specific",
+    "qc_method": "dft",
+    "dft_method": "b3lyp",
+    "reference_value": -1.17448,
+    "property_threshold": 0.1,
+    "structure": [
+    "H",        -1.34725,        2.31739,        0.00000,
+    "H",        -0.64033,        2.35635,        0.00000
+     ]
+}

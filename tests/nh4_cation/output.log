@@ -1,0 +1,120 @@
+INFO:root:############################
+INFO:root:Starting basis set selection.
+INFO:root:nh4.json file supplied as input.
+INFO:root:	energy value for comparison is -57.00110919 within a 0.05 threshold.
+INFO:root:NWChem input file created for nh4_3-21g.
+INFO:root:NWChem input file created for nh4_3-21++g.
+INFO:root:NWChem input file created for nh4_3-21gs.
+INFO:root:NWChem input file created for nh4_3-21++gs.
+INFO:root:NWChem input file created for nh4_3-21+gss.
+INFO:root:NWChem input file created for nh4_6-31g.
+INFO:root:NWChem input file created for nh4_6-31+g.
+INFO:root:NWChem input file created for nh4_6-31++g.
+INFO:root:NWChem input file created for nh4_6-31gs.
+INFO:root:NWChem input file created for nh4_6-31+gs.
+INFO:root:NWChem input file created for nh4_6-31++gs.
+INFO:root:NWChem input file created for nh4_6-31gss.
+INFO:root:NWChem input file created for nh4_6-31+gss.
+INFO:root:NWChem input file created for nh4_6-31++gss.
+INFO:root:NWChem input file created for nh4_6-311g.
+INFO:root:NWChem input file created for nh4_6-311+g.
+INFO:root:NWChem input file created for nh4_6-311++g.
+INFO:root:NWChem input file created for nh4_6-311gs.
+INFO:root:NWChem input file created for nh4_6-311+gs.
+INFO:root:NWChem input file created for nh4_6-311++gs.
+INFO:root:NWChem input file created for nh4_6-311gss.
+INFO:root:NWChem input file created for nh4_6-311+gss.
+INFO:root:NWChem input file created for nh4_6-311++gss.
+INFO:root:NWChem input file created for nh4_cc-pvdz.
+INFO:root:NWChem input file created for nh4_aug-cc-pvdz.
+INFO:root:NWChem input file created for nh4_cc-pvtz.
+INFO:root:NWChem input file created for nh4_aug-cc-pvtz.
+INFO:root:NWChem input file created for nh4_cc-pvqz.
+INFO:root:NWChem input file created for nh4_aug-cc-pvqz.
+INFO:root:submitting nh4_3-21g.inp
+INFO:root:submitting nh4_3-21++g.inp
+INFO:root:submitting nh4_3-21gs.inp
+INFO:root:Calculation failed for nh4_3-21gs.
+INFO:root:submitting nh4_3-21++gs.inp
+INFO:root:Calculation failed for nh4_3-21++gs.
+INFO:root:submitting nh4_3-21+gss.inp
+INFO:root:Calculation failed for nh4_3-21+gss.
+INFO:root:submitting nh4_6-31g.inp
+INFO:root:submitting nh4_6-31+g.inp
+INFO:root:submitting nh4_6-31++g.inp
+INFO:root:submitting nh4_6-31gs.inp
+INFO:root:Calculation failed for nh4_6-31gs.
+INFO:root:submitting nh4_6-31+gs.inp
+INFO:root:Calculation failed for nh4_6-31+gs.
+INFO:root:submitting nh4_6-31++gs.inp
+INFO:root:Calculation failed for nh4_6-31++gs.
+INFO:root:submitting nh4_6-31gss.inp
+INFO:root:Calculation failed for nh4_6-31gss.
+INFO:root:submitting nh4_6-31+gss.inp
+INFO:root:Calculation failed for nh4_6-31+gss.
+INFO:root:submitting nh4_6-31++gss.inp
+INFO:root:Calculation failed for nh4_6-31++gss.
+INFO:root:submitting nh4_6-311g.inp
+INFO:root:submitting nh4_6-311+g.inp
+INFO:root:submitting nh4_6-311++g.inp
+INFO:root:submitting nh4_6-311gs.inp
+INFO:root:Calculation failed for nh4_6-311gs.
+INFO:root:submitting nh4_6-311+gs.inp
+INFO:root:Calculation failed for nh4_6-311+gs.
+INFO:root:submitting nh4_6-311++gs.inp
+INFO:root:Calculation failed for nh4_6-311++gs.
+INFO:root:submitting nh4_6-311gss.inp
+INFO:root:Calculation failed for nh4_6-311gss.
+INFO:root:submitting nh4_6-311+gss.inp
+INFO:root:Calculation failed for nh4_6-311+gss.
+INFO:root:submitting nh4_6-311++gss.inp
+INFO:root:Calculation failed for nh4_6-311++gss.
+INFO:root:submitting nh4_cc-pvdz.inp
+INFO:root:submitting nh4_aug-cc-pvdz.inp
+INFO:root:submitting nh4_cc-pvtz.inp
+INFO:root:submitting nh4_aug-cc-pvtz.inp
+INFO:root:submitting nh4_cc-pvqz.inp
+INFO:root:submitting nh4_aug-cc-pvqz.inp
+INFO:root:Calculation failed for nh4_aug-cc-pvqz.
+INFO:root:3-21g basis set energy of 54.0821 is not within tolerance threshold level of reference.
+INFO:root:3-21++g basis set energy of 54.0841 falls within tolerance level of reference (-57.0011).
+INFO:root:calculation for nh4_3-21gs failed.
+INFO:root:calculation for nh4_3-21++gs failed.
+INFO:root:calculation for nh4_3-21+gss failed.
+INFO:root:6-31g basis set energy of 54.3663 falls within tolerance level of reference (-57.0011).
+INFO:root:6-31+g basis set energy of 54.3677 falls within tolerance level of reference (-57.0011).
+INFO:root:6-31++g basis set energy of 54.3688 falls within tolerance level of reference (-57.0011).
+INFO:root:calculation for nh4_6-31gs failed.
+INFO:root:calculation for nh4_6-31+gs failed.
+INFO:root:calculation for nh4_6-31++gs failed.
+INFO:root:calculation for nh4_6-31gss failed.
+INFO:root:calculation for nh4_6-31+gss failed.
+INFO:root:calculation for nh4_6-31++gss failed.
+INFO:root:6-311g basis set energy of 54.4660 falls within tolerance level of reference (-57.0011).
+INFO:root:6-311+g basis set energy of 54.4663 falls within tolerance level of reference (-57.0011).
+INFO:root:6-311++g basis set energy of 54.4667 falls within tolerance level of reference (-57.0011).
+INFO:root:calculation for nh4_6-311gs failed.
+INFO:root:calculation for nh4_6-311+gs failed.
+INFO:root:calculation for nh4_6-311++gs failed.
+INFO:root:calculation for nh4_6-311gss failed.
+INFO:root:calculation for nh4_6-311+gss failed.
+INFO:root:calculation for nh4_6-311++gss failed.
+INFO:root:cc-pvdz basis set energy of 54.3771 falls within tolerance level of reference (-57.0011).
+INFO:root:aug-cc-pvdz basis set energy of 54.4023 falls within tolerance level of reference (-57.0011).
+INFO:root:cc-pvtz basis set energy of 54.5073 falls within tolerance level of reference (-57.0011).
+INFO:root:aug-cc-pvtz basis set energy of 54.5089 falls within tolerance level of reference (-57.0011).
+INFO:root:cc-pvqz basis set energy of 54.5204 falls within tolerance level of reference (-57.0011).
+INFO:root:calculation for nh4_aug-cc-pvqz failed.
+INFO:root:The following basis sets produce energies within 0.05 of -57.00110919
+INFO:root:	nh4_3-21++g
+INFO:root:	nh4_6-31g
+INFO:root:	nh4_6-31+g
+INFO:root:	nh4_6-31++g
+INFO:root:	nh4_6-311g
+INFO:root:	nh4_6-311+g
+INFO:root:	nh4_6-311++g
+INFO:root:	nh4_cc-pvdz
+INFO:root:	nh4_aug-cc-pvdz
+INFO:root:	nh4_cc-pvtz
+INFO:root:	nh4_aug-cc-pvtz
+INFO:root:	nh4_cc-pvqz

@@ -1,0 +1,107 @@
+INFO:root:############################
+INFO:root:Starting basis set selection.
+INFO:root:nacl.json file supplied as input.
+INFO:root:	energy value for comparison is -621.71568581 within a 0.1 threshold.
+INFO:root:NWChem input file created for nacl_3-21g.
+INFO:root:NWChem input file created for nacl_3-21++g.
+INFO:root:NWChem input file created for nacl_3-21gs.
+INFO:root:NWChem input file created for nacl_3-21++gs.
+INFO:root:NWChem input file created for nacl_3-21+gss.
+INFO:root:NWChem input file created for nacl_6-31g.
+INFO:root:NWChem input file created for nacl_6-31+g.
+INFO:root:NWChem input file created for nacl_6-31++g.
+INFO:root:NWChem input file created for nacl_6-31gs.
+INFO:root:NWChem input file created for nacl_6-31+gs.
+INFO:root:NWChem input file created for nacl_6-31++gs.
+INFO:root:NWChem input file created for nacl_6-31gss.
+INFO:root:NWChem input file created for nacl_6-31+gss.
+INFO:root:NWChem input file created for nacl_6-31++gss.
+INFO:root:NWChem input file created for nacl_6-311g.
+INFO:root:NWChem input file created for nacl_6-311+g.
+INFO:root:NWChem input file created for nacl_6-311++g.
+INFO:root:NWChem input file created for nacl_6-311gs.
+INFO:root:NWChem input file created for nacl_6-311+gs.
+INFO:root:NWChem input file created for nacl_6-311++gs.
+INFO:root:NWChem input file created for nacl_6-311gss.
+INFO:root:NWChem input file created for nacl_6-311+gss.
+INFO:root:NWChem input file created for nacl_6-311++gss.
+INFO:root:NWChem input file created for nacl_cc-pvdz.
+INFO:root:NWChem input file created for nacl_aug-cc-pvdz.
+INFO:root:NWChem input file created for nacl_cc-pvtz.
+INFO:root:NWChem input file created for nacl_aug-cc-pvtz.
+INFO:root:NWChem input file created for nacl_cc-pvqz.
+INFO:root:NWChem input file created for nacl_aug-cc-pvqz.
+INFO:root:submitting nacl_3-21g.inp
+INFO:root:submitting nacl_3-21++g.inp
+INFO:root:submitting nacl_3-21gs.inp
+INFO:root:Calculation failed for nacl_3-21gs.
+INFO:root:submitting nacl_3-21++gs.inp
+INFO:root:Calculation failed for nacl_3-21++gs.
+INFO:root:submitting nacl_3-21+gss.inp
+INFO:root:Calculation failed for nacl_3-21+gss.
+INFO:root:submitting nacl_6-31g.inp
+INFO:root:submitting nacl_6-31+g.inp
+INFO:root:submitting nacl_6-31++g.inp
+INFO:root:submitting nacl_6-31gs.inp
+INFO:root:Calculation failed for nacl_6-31gs.
+INFO:root:submitting nacl_6-31+gs.inp
+INFO:root:Calculation failed for nacl_6-31+gs.
+INFO:root:submitting nacl_6-31++gs.inp
+INFO:root:Calculation failed for nacl_6-31++gs.
+INFO:root:submitting nacl_6-31gss.inp
+INFO:root:Calculation failed for nacl_6-31gss.
+INFO:root:submitting nacl_6-31+gss.inp
+INFO:root:Calculation failed for nacl_6-31+gss.
+INFO:root:submitting nacl_6-31++gss.inp
+INFO:root:Calculation failed for nacl_6-31++gss.
+INFO:root:submitting nacl_6-311g.inp
+INFO:root:submitting nacl_6-311+g.inp
+INFO:root:submitting nacl_6-311++g.inp
+INFO:root:submitting nacl_6-311gs.inp
+INFO:root:Calculation failed for nacl_6-311gs.
+INFO:root:submitting nacl_6-311+gs.inp
+INFO:root:Calculation failed for nacl_6-311+gs.
+INFO:root:submitting nacl_6-311++gs.inp
+INFO:root:Calculation failed for nacl_6-311++gs.
+INFO:root:submitting nacl_6-311gss.inp
+INFO:root:Calculation failed for nacl_6-311gss.
+INFO:root:submitting nacl_6-311+gss.inp
+INFO:root:Calculation failed for nacl_6-311+gss.
+INFO:root:submitting nacl_6-311++gss.inp
+INFO:root:Calculation failed for nacl_6-311++gss.
+INFO:root:submitting nacl_cc-pvdz.inp
+INFO:root:submitting nacl_aug-cc-pvdz.inp
+INFO:root:submitting nacl_cc-pvtz.inp
+INFO:root:submitting nacl_aug-cc-pvtz.inp
+INFO:root:submitting nacl_cc-pvqz.inp
+INFO:root:submitting nacl_aug-cc-pvqz.inp
+INFO:root:_3-21g basis set energy of 18.4881 is not within tolerance threshold level of reference.
+INFO:root:_3-21++g basis set energy of 18.5265 is not within tolerance threshold level of reference.
+INFO:root:calculation for nacl_3-21gs failed.
+INFO:root:calculation for nacl_3-21++gs failed.
+INFO:root:calculation for nacl_3-21+gss failed.
+INFO:root:_6-31g basis set energy of 21.6376 is not within tolerance threshold level of reference.
+INFO:root:_6-31+g basis set energy of 21.6455 is not within tolerance threshold level of reference.
+INFO:root:_6-31++g basis set energy of 21.6455 is not within tolerance threshold level of reference.
+INFO:root:calculation for nacl_6-31gs failed.
+INFO:root:calculation for nacl_6-31+gs failed.
+INFO:root:calculation for nacl_6-31++gs failed.
+INFO:root:calculation for nacl_6-31gss failed.
+INFO:root:calculation for nacl_6-31+gss failed.
+INFO:root:calculation for nacl_6-31++gss failed.
+INFO:root:_6-311g basis set energy of 21.6958 is not within tolerance threshold level of reference.
+INFO:root:_6-311+g basis set energy of 21.6965 is not within tolerance threshold level of reference.
+INFO:root:_6-311++g basis set energy of 21.6965 is not within tolerance threshold level of reference.
+INFO:root:calculation for nacl_6-311gs failed.
+INFO:root:calculation for nacl_6-311+gs failed.
+INFO:root:calculation for nacl_6-311++gs failed.
+INFO:root:calculation for nacl_6-311gss failed.
+INFO:root:calculation for nacl_6-311+gss failed.
+INFO:root:calculation for nacl_6-311++gss failed.
+INFO:root:_cc-pvdz basis set energy of 21.7419 is not within tolerance threshold level of reference.
+INFO:root:_aug-cc-pvdz basis set energy of 21.7569 is not within tolerance threshold level of reference.
+INFO:root:_cc-pvtz basis set energy of 21.7999 is not within tolerance threshold level of reference.
+INFO:root:_aug-cc-pvtz basis set energy of 21.8048 is not within tolerance threshold level of reference.
+INFO:root:_cc-pvqz basis set energy of 21.8227 is not within tolerance threshold level of reference.
+INFO:root:_aug-cc-pvqz basis set energy of 21.8241 is not within tolerance threshold level of reference.
+INFO:root:The following basis sets produce energies within 0.1 of -621.71568581

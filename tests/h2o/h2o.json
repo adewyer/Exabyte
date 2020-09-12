@@ -1,0 +1,16 @@
+{
+    "molecule_name": "h2o",
+    "job_summary": "test case",
+    "charge": 0,
+    "multiplicity": 1,
+    "basis_set_selector": "Specific",
+    "qc_method": "dft",
+    "dft_method": "b3lyp",
+    "reference_value": -76.37532,
+    "selector_threshold": 0.02,
+    "structure": [
+        "O", 0.60161, 1.68925, -0.00684,
+        "H", 1.56949, 1.64563, 0.00906,
+        "H", 0.32276, 0.81732, 0.31087
+     ]
+}

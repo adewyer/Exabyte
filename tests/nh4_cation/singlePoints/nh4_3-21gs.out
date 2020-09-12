@@ -1,0 +1,308 @@
+ argument  1 = nh4_3-21gs.inp
+                                         
+                                         
+
+
+             Northwest Computational Chemistry Package (NWChem) 7.0.0
+             --------------------------------------------------------
+
+
+                    Environmental Molecular Sciences Laboratory
+                       Pacific Northwest National Laboratory
+                                Richland, WA 99352
+
+                              Copyright (c) 1994-2019
+                       Pacific Northwest National Laboratory
+                            Battelle Memorial Institute
+
+             NWChem is an open-source computational chemistry package
+                        distributed under the terms of the
+                      Educational Community License (ECL) 2.0
+             A copy of the license is included with this distribution
+                              in the LICENSE.TXT file
+
+                                  ACKNOWLEDGMENT
+                                  --------------
+
+            This software and its documentation were developed at the
+            EMSL at Pacific Northwest National Laboratory, a multiprogram
+            national laboratory, operated for the U.S. Department of Energy
+            by Battelle under Contract Number DE-AC05-76RL01830. Support
+            for this work was provided by the Department of Energy Office
+            of Biological and Environmental Research, Office of Basic
+            Energy Sciences, and the Office of Advanced Scientific Computing.
+
+
+           Job information
+           ---------------
+
+    hostname        = Amanda-Dewyers-MacBook-Air.local
+    program         = nwchem
+    date            = Fri Sep 11 17:26:24 2020
+
+    compiled        = Fri_Jul_03_06:05:09_2020
+    source          = /private/tmp/nwchem-20200703-71421-tc8c0i/nwchem-7.0.0
+    nwchem branch   = 7.0.0
+    nwchem revision = 2c9a1c7c
+    ga revision     = 5.7.1
+    use scalapack   = T
+    input           = nh4_3-21gs.inp
+    prefix          = nh4_3-21gs.
+    data base       = ./nh4_3-21gs.db
+    status          = startup
+    nproc           =        1
+    time left       =     -1s
+
+
+
+           Memory information
+           ------------------
+
+    heap     =   13107196 doubles =    100.0 Mbytes
+    stack    =   13107201 doubles =    100.0 Mbytes
+    global   =   26214400 doubles =    200.0 Mbytes (distinct from heap & stack)
+    total    =   52428797 doubles =    400.0 Mbytes
+    verify   = yes
+    hardfail = no 
+
+
+           Directory information
+           ---------------------
+
+  0 permanent = .
+  0 scratch   = .
+
+
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+                                     test case
+                                     ---------
+ C1  symmetry detected
+
+          ------
+          auto-z
+          ------
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+
+
+                             Geometry "geometry" -> ""
+                             -------------------------
+
+ Output coordinates in a.u. (scale by  1.000000000 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 N                    7.0000     0.00001682    -0.00000000     0.00000806
+    2 H                    1.0000    -0.99011928    -0.20294100     0.17987908
+    3 H                    1.0000     0.56649954    -0.82246279     0.23776620
+    4 H                    1.0000     0.29585203     0.79730895     0.57506355
+    5 H                    1.0000     0.12764994     0.22809484    -0.99276521
+
+      Atomic Mass 
+      ----------- 
+
+      N                 14.003070
+      H                  1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)      30.8536052699
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+     0.0000000000    -0.0000000000     0.0000000000
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value
+      ----------- --------  ----- ----- ----- ----- ----- ----------
+    1 Stretch                  1     2                       0.54325
+    2 Stretch                  1     3                       0.54325
+    3 Stretch                  1     4                       0.54325
+    4 Stretch                  1     5                       0.54326
+    5 Stretch                  2     3                       0.88710
+    6 Stretch                  2     4                       0.88712
+    7 Stretch                  2     5                       0.88711
+    8 Stretch                  3     4                       0.88717
+    9 Stretch                  3     5                       0.88714
+   10 Stretch                  4     5                       0.88712
+   11 Bend                     1     2     3                35.26638
+   12 Bend                     1     2     4                35.26482
+   13 Bend                     1     2     5                35.26646
+   14 Bend                     1     3     2                35.26699
+   15 Bend                     1     3     4                35.26038
+   16 Bend                     1     3     5                35.26365
+   17 Bend                     1     4     2                35.26481
+   18 Bend                     1     4     3                35.25976
+   19 Bend                     1     4     5                35.26518
+   20 Bend                     1     5     2                35.26630
+   21 Bend                     1     5     3                35.26289
+   22 Bend                     1     5     4                35.26504
+   23 Bend                     2     1     3               109.46663
+   24 Bend                     2     1     4               109.47036
+   25 Bend                     2     1     5               109.46724
+   26 Bend                     2     3     4                59.99933
+   27 Bend                     2     3     5                59.99942
+   28 Bend                     2     4     3                59.99628
+   29 Bend                     2     4     5                59.99890
+   30 Bend                     2     5     3                59.99811
+   31 Bend                     2     5     4                60.00063
+   32 Bend                     3     1     4               109.47985
+   33 Bend                     3     1     5               109.47345
+   34 Bend                     3     2     4                60.00440
+   35 Bend                     3     2     5                60.00248
+   36 Bend                     3     4     5                59.99925
+   37 Bend                     3     5     4                60.00299
+   38 Bend                     4     1     5               109.46979
+   39 Bend                     4     2     5                60.00047
+   40 Bend                     4     3     5                59.99776
+   41 Torsion                  1     2     3     4          35.26008
+   42 Torsion                  1     2     3     5         -35.26647
+   43 Torsion                  1     2     4     3         -35.26164
+   44 Torsion                  1     2     4     5          35.26819
+   45 Torsion                  1     2     5     3          35.26640
+   46 Torsion                  1     2     5     4         -35.26656
+   47 Torsion                  1     3     2     4         -35.26008
+   48 Torsion                  1     3     2     5          35.26647
+   49 Torsion                  1     3     4     2          35.26668
+   50 Torsion                  1     3     4     5         -35.26257
+   51 Torsion                  1     3     5     2         -35.26981
+   52 Torsion                  1     3     5     4          35.25930
+   53 Torsion                  1     4     2     3          35.26164
+   54 Torsion                  1     4     2     5         -35.26819
+   55 Torsion                  1     4     3     2         -35.26668
+   56 Torsion                  1     4     3     5          35.26257
+   57 Torsion                  1     4     5     2          35.26782
+   58 Torsion                  1     4     5     3         -35.25716
+   59 Torsion                  1     5     2     3         -35.26640
+   60 Torsion                  1     5     2     4          35.26656
+   61 Torsion                  1     5     3     2          35.26981
+   62 Torsion                  1     5     3     4         -35.25930
+   63 Torsion                  1     5     4     2         -35.26782
+   64 Torsion                  1     5     4     3          35.25716
+   65 Torsion                  2     1     3     4        -120.00142
+   66 Torsion                  2     1     3     5         119.99368
+   67 Torsion                  2     1     4     3         119.99913
+   68 Torsion                  2     1     4     5        -119.99373
+   69 Torsion                  2     1     5     3        -119.99330
+   70 Torsion                  2     1     5     4         119.99564
+   71 Torsion                  2     3     1     4         120.00142
+   72 Torsion                  2     3     1     5        -119.99368
+   73 Torsion                  2     3     4     5         -70.52925
+   74 Torsion                  2     3     5     4          70.52911
+   75 Torsion                  2     4     1     3        -119.99913
+   76 Torsion                  2     4     1     5         119.99373
+   77 Torsion                  2     4     3     5          70.52925
+   78 Torsion                  2     4     5     3         -70.52498
+   79 Torsion                  2     5     1     3         119.99330
+   80 Torsion                  2     5     1     4        -119.99564
+   81 Torsion                  2     5     3     4         -70.52911
+   82 Torsion                  2     5     4     3          70.52498
+   83 Torsion                  3     1     2     4         120.00723
+   84 Torsion                  3     1     2     5        -119.99748
+   85 Torsion                  3     1     4     5         120.00714
+   86 Torsion                  3     1     5     4        -120.01106
+   87 Torsion                  3     2     1     4        -120.00723
+   88 Torsion                  3     2     1     5         119.99748
+   89 Torsion                  3     2     4     5          70.52983
+   90 Torsion                  3     2     5     4         -70.53296
+   91 Torsion                  3     4     1     5        -120.00714
+   92 Torsion                  3     4     2     5         -70.52983
+   93 Torsion                  3     5     1     4         120.01106
+   94 Torsion                  3     5     2     4          70.53296
+   95 Torsion                  4     1     2     5         119.99528
+   96 Torsion                  4     1     3     5        -120.00490
+   97 Torsion                  4     2     1     5        -119.99528
+   98 Torsion                  4     2     3     5         -70.52655
+   99 Torsion                  4     3     1     5         120.00490
+  100 Torsion                  4     3     2     5          70.52655
+
+
+            XYZ format geometry
+            -------------------
+     5
+ geometry
+ N                     0.00000890    -0.00000000     0.00000426
+ H                    -0.52394860    -0.10739176     0.09518792
+ H                     0.29977867    -0.43522860     0.12582046
+ H                     0.15655816     0.42191776     0.30431055
+ H                     0.06754944     0.12070260    -0.52534876
+
+ ==============================================================================
+                                internuclear distances
+ ------------------------------------------------------------------------------
+       center one      |      center two      | atomic units |       a.u.
+ ------------------------------------------------------------------------------
+    2 H                |   1 N                |     1.02660  |     1.02660
+    3 H                |   1 N                |     1.02658  |     1.02658
+    4 H                |   1 N                |     1.02660  |     1.02660
+    5 H                |   1 N                |     1.02660  |     1.02660
+ ------------------------------------------------------------------------------
+                         number of included internuclear distances:          4
+ ==============================================================================
+
+
+
+ ==============================================================================
+                                 internuclear angles
+ ------------------------------------------------------------------------------
+        center 1       |       center 2       |       center 3       |  degrees
+ ------------------------------------------------------------------------------
+    2 H                |   1 N                |   3 H                |   109.47
+    2 H                |   1 N                |   4 H                |   109.47
+    2 H                |   1 N                |   5 H                |   109.47
+    3 H                |   1 N                |   4 H                |   109.48
+    3 H                |   1 N                |   5 H                |   109.47
+    4 H                |   1 N                |   5 H                |   109.47
+ ------------------------------------------------------------------------------
+                            number of included internuclear angles:          6
+ ==============================================================================
+
+
+
+  library name resolved from: .nwchemrc
+  library file name is: </usr/local/Cellar/nwchem/7.0.0_2/share/nwchem/libraries/>
+  
+
+
+ Summary of "ao basis" -> "" (cartesian)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ *                           3-21gs                   on all atoms 
+
+
+
+                                 NWChem DFT Module
+                                 -----------------
+
+
+                                     test case
+
+
+  bas_tag_lib: failed to locate basis n_3-21gs in file /usr/local/Cellar/nwchem/7.0.0_2/share/nwchem/libraries/
+ ------------------------------------------------------------------------
+ bas_tag_lib: no such basis available                   0
+ ------------------------------------------------------------------------
+ ------------------------------------------------------------------------
+  current input line : 
+    19: task dft energy
+ ------------------------------------------------------------------------
+ ------------------------------------------------------------------------
+ There is an error in the input file
+ ------------------------------------------------------------------------
+ For more information see the NWChem manual at https://github.com/nwchemgit/nwchem/wiki
+
+
+ For further details see manual section:                                                                                                                                                                                                                                                                

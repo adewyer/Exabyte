@@ -1,0 +1,11 @@
+Basis sets that fall within 0.9850 of the reference for bh3:
+
+aug-cc-pvtz is the most accurate basis set tested, and most expensive to run
+3-21++g is the least accurate basis set tested, and least expensive to run.
+
+Other basis sets that meet threshold criteria are:bh3_aug-cc-pvtz
+bh3_6-311++g
+bh3_6-311g
+bh3_6-31+g
+bh3_aug-cc-pvdz
+bh3_3-21++g

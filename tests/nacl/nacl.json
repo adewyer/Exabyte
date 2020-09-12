@@ -1,0 +1,15 @@
+{
+    "molecule_name": "nacl",
+    "job_description": "test case",
+    "charge": 0,
+    "multiplicity": 1,
+    "basis_set_selector": "Specific",
+    "qc_method": "dft",
+    "dft_method": "b3lyp",
+    "property_threshold": 0.02,
+    "reference_value": -621.71568581,
+    "structure": [
+    "Na",         0.65573,        0.46238,       -0.06572,
+    "Cl",         3.04838,        0.44841,        0.08420
+     ]
+}

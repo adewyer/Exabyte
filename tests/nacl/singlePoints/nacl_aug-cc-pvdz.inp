@@ -1,0 +1,16 @@
+ start nacl_aug-cc-pvdz 
+ title "test case"
+ charge 0 
+
+ geometry units au  
+ Na	0.65573	0.46238	-0.06572
+ Cl	3.04838	0.44841	0.0842
+ end  
+ basis  
+   * library aug-cc-pvdz  
+ end
+ dft
+ xc b3lyp
+ mult 1
+ end
+task dft energy

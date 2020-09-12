@@ -1,0 +1,18 @@
+{
+    "molecule_name": "nh4",
+    "job_description": "test case",
+    "charge": 1,
+    "multiplicity": 1,
+    "basis_set_selector": "Specific",
+    "qc_method": "dft",
+    "dft_method": "b3lyp",
+    "property_threshold": 0.05,
+    "reference_value": -57.00110919,
+    "structure": [
+    "N",          0.53599,        1.84477,        0.06448,
+    "H",          1.55633,        1.74298,        0.01495,
+    "H",          0.20733,        2.39194,       -0.73955,
+    "H",          0.28210,        2.32776,        0.93406,
+    "H",          0.09835,        0.91626,        0.04846
+     ]
+}

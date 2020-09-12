@@ -1,0 +1,227 @@
+ argument  1 = bh3_3-21++gs.inp
+                                         
+                                         
+
+
+             Northwest Computational Chemistry Package (NWChem) 7.0.0
+             --------------------------------------------------------
+
+
+                    Environmental Molecular Sciences Laboratory
+                       Pacific Northwest National Laboratory
+                                Richland, WA 99352
+
+                              Copyright (c) 1994-2019
+                       Pacific Northwest National Laboratory
+                            Battelle Memorial Institute
+
+             NWChem is an open-source computational chemistry package
+                        distributed under the terms of the
+                      Educational Community License (ECL) 2.0
+             A copy of the license is included with this distribution
+                              in the LICENSE.TXT file
+
+                                  ACKNOWLEDGMENT
+                                  --------------
+
+            This software and its documentation were developed at the
+            EMSL at Pacific Northwest National Laboratory, a multiprogram
+            national laboratory, operated for the U.S. Department of Energy
+            by Battelle under Contract Number DE-AC05-76RL01830. Support
+            for this work was provided by the Department of Energy Office
+            of Biological and Environmental Research, Office of Basic
+            Energy Sciences, and the Office of Advanced Scientific Computing.
+
+
+           Job information
+           ---------------
+
+    hostname        = Amanda-Dewyers-MacBook-Air.local
+    program         = nwchem
+    date            = Fri Sep 11 16:50:58 2020
+
+    compiled        = Fri_Jul_03_06:05:09_2020
+    source          = /private/tmp/nwchem-20200703-71421-tc8c0i/nwchem-7.0.0
+    nwchem branch   = 7.0.0
+    nwchem revision = 2c9a1c7c
+    ga revision     = 5.7.1
+    use scalapack   = T
+    input           = bh3_3-21++gs.inp
+    prefix          = bh3_3-21++gs.
+    data base       = ./bh3_3-21++gs.db
+    status          = startup
+    nproc           =        1
+    time left       =     -1s
+
+
+
+           Memory information
+           ------------------
+
+    heap     =   13107196 doubles =    100.0 Mbytes
+    stack    =   13107201 doubles =    100.0 Mbytes
+    global   =   26214400 doubles =    200.0 Mbytes (distinct from heap & stack)
+    total    =   52428797 doubles =    400.0 Mbytes
+    verify   = yes
+    hardfail = no 
+
+
+           Directory information
+           ---------------------
+
+  0 permanent = .
+  0 scratch   = .
+
+
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+                                     test case
+                                     ---------
+ D3H symmetry detected
+
+          ------
+          auto-z
+          ------
+  Looking for out-of-plane bends
+  no constraints, skipping    0.0000000000000000     
+  no constraints, skipping    0.0000000000000000     
+
+
+                             Geometry "geometry" -> ""
+                             -------------------------
+
+ Output coordinates in a.u. (scale by  1.000000000 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 B                    5.0000     0.00000000     0.00000000     0.00000000
+    2 H                    1.0000     0.83517244     0.83517244     0.00000000
+    3 H                    1.0000     0.30569433    -1.14086677     0.00000000
+    4 H                    1.0000    -1.14086677     0.30569433     0.00000000
+
+      Atomic Mass 
+      ----------- 
+
+      B                 11.009310
+      H                  1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)      14.1663517928
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+    -0.0000000000    -0.0000000000     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             D3h       
+ Group number             27
+ Group order              12
+ No. of unique centers     2
+
+      Symmetry unique atoms
+
+     1    2
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value
+      ----------- --------  ----- ----- ----- ----- ----- ----------
+    1 Stretch                  1     2                       0.62502
+    2 Stretch                  1     3                       0.62502
+    3 Stretch                  1     4                       0.62502
+    4 Bend                     2     1     3               120.00000
+    5 Bend                     2     1     4               120.00000
+    6 Bend                     3     1     4               120.00000
+    7 Torsion                  2     1     3     4         180.00000
+    8 Torsion                  2     1     4     3         180.00000
+    9 Torsion                  3     1     2     4         180.00000
+   10 Torsion                  2     4     1     3         180.00000
+   11 Torsion                  3     2     1     4         180.00000
+   12 Torsion                  2     3     1     4         180.00000
+
+
+            XYZ format geometry
+            -------------------
+     4
+ geometry
+ B                     0.00000000     0.00000000     0.00000000
+ H                     0.44195425     0.44195425     0.00000000
+ H                     0.16176648    -0.60372074     0.00000000
+ H                    -0.60372074     0.16176648     0.00000000
+
+ ==============================================================================
+                                internuclear distances
+ ------------------------------------------------------------------------------
+       center one      |      center two      | atomic units |       a.u.
+ ------------------------------------------------------------------------------
+    2 H                |   1 B                |     1.18111  |     1.18111
+    3 H                |   1 B                |     1.18111  |     1.18111
+    4 H                |   1 B                |     1.18111  |     1.18111
+ ------------------------------------------------------------------------------
+                         number of included internuclear distances:          3
+ ==============================================================================
+
+
+
+ ==============================================================================
+                                 internuclear angles
+ ------------------------------------------------------------------------------
+        center 1       |       center 2       |       center 3       |  degrees
+ ------------------------------------------------------------------------------
+    2 H                |   1 B                |   3 H                |   120.00
+    2 H                |   1 B                |   4 H                |   120.00
+    3 H                |   1 B                |   4 H                |   120.00
+ ------------------------------------------------------------------------------
+                            number of included internuclear angles:          3
+ ==============================================================================
+
+
+
+  library name resolved from: .nwchemrc
+  library file name is: </usr/local/Cellar/nwchem/7.0.0_2/share/nwchem/libraries/>
+  
+
+
+ Summary of "ao basis" -> "" (cartesian)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ *                          3-21++gs                  on all atoms 
+
+
+
+                                 NWChem DFT Module
+                                 -----------------
+
+
+                                     test case
+
+
+  bas_tag_lib: failed to locate basis b_3-21++gs in file /usr/local/Cellar/nwchem/7.0.0_2/share/nwchem/libraries/
+ ------------------------------------------------------------------------
+ bas_tag_lib: no such basis available                   0
+ ------------------------------------------------------------------------
+ ------------------------------------------------------------------------
+  current input line : 
+    18: task dft energy
+ ------------------------------------------------------------------------
+ ------------------------------------------------------------------------
+ There is an error in the input file
+ ------------------------------------------------------------------------
+ For more information see the NWChem manual at https://github.com/nwchemgit/nwchem/wiki
+
+
+ For further details see manual section:                                                                                                                                                                                                                                                                

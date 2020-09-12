@@ -1,0 +1,14 @@
+energy reference value for nh4 = -57.00110919
+nh4_3-21g energy = 54.0821, ratio = -0.9488
+nh4_3-21++g energy = 54.0841, ratio = -0.9488
+nh4_6-31g energy = 54.3663, ratio = -0.9538
+nh4_6-31+g energy = 54.3677, ratio = -0.9538
+nh4_6-31++g energy = 54.3688, ratio = -0.9538
+nh4_6-311g energy = 54.4660, ratio = -0.9555
+nh4_6-311+g energy = 54.4663, ratio = -0.9555
+nh4_6-311++g energy = 54.4667, ratio = -0.9555
+nh4_cc-pvdz energy = 54.3771, ratio = -0.9540
+nh4_aug-cc-pvdz energy = 54.4023, ratio = -0.9544
+nh4_cc-pvtz energy = 54.5073, ratio = -0.9562
+nh4_aug-cc-pvtz energy = 54.5089, ratio = -0.9563
+nh4_cc-pvqz energy = 54.5204, ratio = -0.9565

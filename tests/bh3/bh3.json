@@ -1,0 +1,17 @@
+{
+    "molecule_name": "bh3",
+    "job_description": "test case",
+    "charge": 0,
+    "multiplicity": 1,
+    "basis_set_selector": "Specific",
+    "qc_method": "dft",
+    "dft_method": "b3lyp",
+    "property_threshold": 0.015,
+    "reference_value": -26.54842,
+    "structure": [
+    "B",          0.55118,        1.75893,        0.00000,
+    "H",          1.73229,        1.75893,        0.00000,
+    "H",         -0.03938,        1.76567,        1.02285,
+    "H",         -0.03938,        1.75220,       -1.02285
+     ]
+}
