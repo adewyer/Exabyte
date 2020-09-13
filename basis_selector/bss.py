@@ -2,11 +2,18 @@
 Author: Amanda Dewyer
 Date: September 7th 2020
 
-Main class to run basis set property program.
+Main function of basis set selector package..
+
 Program will create and run nwchem quantum chemistry
 calculations with various basis sets and identify which
 basis sets produce a property type within a given threshold
 of a reference value supplied by the user.
+
+The code will return the least accurate and expensive basis set
+as well as the most accurate and expensive basis set that fit
+the threshold and reference criteria supplied by the user.
+
+A list of all basis sets that fit within criteria is also created.
 """
 
 import sys
@@ -73,6 +80,7 @@ def main():
         energy = nw.get_nwchem_energy(calcName)
         energies[calcName] = energy
 
+    # Collect results from basis set comparison to reference and threshold supplied by user.
     acceptableBasisSets, leastAccurateBasis, mostAccurateBasis = compare_values.check_property(param.par['molecule_name'],
                                                                                                param.par['reference_type'], 
                                                                                                param.par['property_threshold'], 
@@ -81,8 +89,10 @@ def main():
 
     logging.info("The following basis sets produce energies within {} of {}".format(param.par['property_threshold'], 
                                                                                     param.par['reference_value']))
+    labelLength = len(param.par['molecule_name']) + 1
     for basis in acceptableBasisSets:
-        logging.info("\t{}".format(basis))
+        logging.info("\t{}".format(basis[labelLength::]))
+
 
     print("Done with Basis Set Selection")
     print("{} is the cheapest and least accurate basis set that fits threshold criteria.".format(leastAccurateBasis))

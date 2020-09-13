@@ -11,7 +11,7 @@ import logging
 
 def check_property(molecule, prop, threshold, propertyDict, ref):
     """
-    function to return whether or not a calculated roperty value falls
+    function to return whether or not a calculated property value falls
     within the threshold for a given reference value.
     """
 
@@ -30,11 +30,13 @@ def check_property(molecule, prop, threshold, propertyDict, ref):
             propertyRatio = calc_property_ratio(float(value), ref)
 
             fi.write("{} {} = {:.4f}, ratio = {:.4f}\n".format(key, prop, float(value), float(propertyRatio)))
+            labelLength = len(molecule) + 1  # calculate the length of the molecule string for formatting output
+            print(labelLength, key[labelLength::])
             if abs(propertyRatio) > float(threshold):
-                logging.info("{} basis set energy of {:.4f} falls within tolerance level of reference ({:.4f}).".format(key[4::], value, ref))
+                logging.info("{} basis set energy of {:.4f} falls within tolerance level of reference ({:.4f}).".format(key[labelLength::], value, ref))
                 acceptableBasisSets[key] = propertyRatio
             else:
-                logging.info("{} basis set energy of {:.4f} is not within tolerance threshold level of reference.".format(key[4::], value))
+                logging.info("{} basis set energy of {:.4f} is not within tolerance threshold level of reference.".format(key[labelLength::], value))
         leastAccurateBasis, mostAccurateBasis = print_acceptable_basis(acceptableBasisSets, molecule, threshold)
     fi.close()
     return acceptableBasisSets, leastAccurateBasis, mostAccurateBasis
@@ -48,16 +50,15 @@ def sort_basis(basisSets):
 
 def print_acceptable_basis(basis, molecule, threshold):
     """
-    Function that does 2 things:
-    2. Prints the most accurate, and least accurate basis set options. 
-       Least accurate is likely the cheapest method.
-    3. Prints all other basis sets that are considered acceptable 
-       based on reference and threshold.
+    Function that prints the least and most expensive basis sets
+    that fit the threshold and reference criteria along with a list
+    of all basis sets that fit the criteria.
     """
 
     basisSorted = sort_basis(basis)
    
     fi = open('acceptableBasisSets.log', 'w')
+    labelLength = len(molecule)  # calculate the length of the molecule string for formatting output
     fi.write("Basis sets that fall within {:.4f} of the reference for {}:\n".format(threshold, molecule))
 
     if len(basisSorted) == 0:
@@ -65,13 +66,14 @@ def print_acceptable_basis(basis, molecule, threshold):
         return 'No basis', 'No basis'
 
     basisKeys = [key[0] for key in basisSorted]
-    fi.write("\n{} is the most accurate basis set tested, and most expensive to run\n".format(basisKeys[0][4::]))
-    fi.write("{} is the least accurate basis set tested, and least expensive to run.\n".format(basisKeys[-1][4::]))
+    labelLength = len(molecule) + 1
+    fi.write("\n{} is the most accurate basis set tested, and most expensive to run\n".format(basisKeys[0][labelLength::]))
+    fi.write("{} is the least accurate basis set tested, and least expensive to run.\n".format(basisKeys[-1][labelLength::]))
     fi.write("\nOther basis sets that meet threshold criteria are:")
     for key in basisKeys:
         fi.write("{}\n".format(key))
     fi.close()
-    return basisKeys[-1][4::], basisKeys[0][4::]
+    return basisKeys[-1][labelLength::], basisKeys[0][labelLength::]
 
 def calc_property_ratio(calc, ref):
     # Function that will calculate the ratio between the calcualted property value and reference

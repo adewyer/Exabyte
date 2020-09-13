@@ -1,5 +1,4 @@
-Format code as express code
+TO DO
 
-- __init.py__ inside of bss folder
-- large examples if needed
-- License/Readme updates etc
+1. Fix formatting on output to be molecule specific [4::] works for H2O but not H2
+2. Check over code to make sure comments/labeling is appropriate

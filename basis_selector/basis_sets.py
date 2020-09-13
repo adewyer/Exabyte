@@ -2,18 +2,20 @@
 Author: Amanda Dewyer
 Date: September 7th 2020
 
-Basis sets available for selection
-by the automated basis set selector package
+Script is meant to act as a dictionary of
+Basis sets available for use with the 
+automated basis set selector package
 
-Other basis set types to add:
+Other basis set types to add in the future:
   Karlsruhe (def2-NVP type basis)
   CBS (complete basis set type)
   STO (minimal basis sets)
   cc-pV5Z, cc-pV6Z, aug-cc-pV5Z, aug-cc-pV6Z
   Any basis sets available in nwchem
+
 """
 
-# Pople Basis Sets (X-YZg type basis)
+# Dictionary for Pople Basis Sets (X-YZg type basis)
 # X = primitive gaussians defining core electrons
 # Y & Z = primitive gaussians defining valence electons
 # Polarization and diffuse functions can be added onto basis set
@@ -26,7 +28,7 @@ popleBasis['3-21g'] = '3-21'
 popleBasis['6-31g'] = '6-31'
 popleBasis['6-211g'] = '6-311'
 
-# Dunning Basis Sets (cc-pVNZ type basis)
+# Dictionary for Dunning Basis Sets (cc-pVNZ type basis)
 # cc-p = correlation consistent polarized basis sets
 # V = valence only functionals
 # NZ = number of functions used to describe valence electrons
