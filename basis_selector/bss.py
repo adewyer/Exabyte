@@ -90,8 +90,11 @@ def main():
     logging.info("The following basis sets produce energies within {} of {}".format(param.par['property_threshold'], 
                                                                                     param.par['reference_value']))
     labelLength = len(param.par['molecule_name']) + 1
-    for basis in acceptableBasisSets:
-        logging.info("\t{}".format(basis[labelLength::]))
+    if len (acceptableBasisSets) == 0:
+        logging.info("No basis sets meet threshold and reference criteria.")
+    else:
+        for basis in acceptableBasisSets:
+            logging.info("\t{}".format(basis[labelLength::]))
 
 
     print("Done with Basis Set Selection")

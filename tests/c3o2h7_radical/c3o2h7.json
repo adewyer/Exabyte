@@ -6,6 +6,7 @@
     "basis_set_selector": "Specific",
     "qc_method": "dft",
     "dft_method": "b3lyp",
+    "reference_value": -268.3654723,
     "property_threshold": 0.1,
     "structure": [
     "C",         -3.14818,        0.11327,       -0.21271,

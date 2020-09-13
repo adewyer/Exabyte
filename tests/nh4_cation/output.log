@@ -75,9 +75,8 @@ INFO:root:submitting nh4_cc-pvtz.inp
 INFO:root:submitting nh4_aug-cc-pvtz.inp
 INFO:root:submitting nh4_cc-pvqz.inp
 INFO:root:submitting nh4_aug-cc-pvqz.inp
-INFO:root:Calculation failed for nh4_aug-cc-pvqz.
 INFO:root:3-21g basis set energy of 54.0821 is not within tolerance threshold level of reference.
-INFO:root:3-21++g basis set energy of 54.0841 falls within tolerance level of reference (-57.0011).
+INFO:root:3-21++g basis set energy of 54.0841 is not within tolerance threshold level of reference.
 INFO:root:calculation for nh4_3-21gs failed.
 INFO:root:calculation for nh4_3-21++gs failed.
 INFO:root:calculation for nh4_3-21+gss failed.
@@ -104,17 +103,17 @@ INFO:root:aug-cc-pvdz basis set energy of 54.4023 falls within tolerance level o
 INFO:root:cc-pvtz basis set energy of 54.5073 falls within tolerance level of reference (-57.0011).
 INFO:root:aug-cc-pvtz basis set energy of 54.5089 falls within tolerance level of reference (-57.0011).
 INFO:root:cc-pvqz basis set energy of 54.5204 falls within tolerance level of reference (-57.0011).
-INFO:root:calculation for nh4_aug-cc-pvqz failed.
+INFO:root:aug-cc-pvqz basis set energy of 54.5206 falls within tolerance level of reference (-57.0011).
 INFO:root:The following basis sets produce energies within 0.05 of -57.00110919
-INFO:root:	nh4_3-21++g
-INFO:root:	nh4_6-31g
-INFO:root:	nh4_6-31+g
-INFO:root:	nh4_6-31++g
-INFO:root:	nh4_6-311g
-INFO:root:	nh4_6-311+g
-INFO:root:	nh4_6-311++g
-INFO:root:	nh4_cc-pvdz
-INFO:root:	nh4_aug-cc-pvdz
-INFO:root:	nh4_cc-pvtz
-INFO:root:	nh4_aug-cc-pvtz
-INFO:root:	nh4_cc-pvqz
+INFO:root:	6-31g
+INFO:root:	6-31+g
+INFO:root:	6-31++g
+INFO:root:	6-311g
+INFO:root:	6-311+g
+INFO:root:	6-311++g
+INFO:root:	cc-pvdz
+INFO:root:	aug-cc-pvdz
+INFO:root:	cc-pvtz
+INFO:root:	aug-cc-pvtz
+INFO:root:	cc-pvqz
+INFO:root:	aug-cc-pvqz

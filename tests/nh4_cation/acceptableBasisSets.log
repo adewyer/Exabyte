@@ -1,17 +1,18 @@
 Basis sets that fall within 0.9500 of the reference for nh4:
 
-cc-pvqz is the most accurate basis set tested, and most expensive to run
-3-21++g is the least accurate basis set tested, and least expensive to run.
+aug-cc-pvqz is the most accurate basis set tested, and most expensive to run
+6-31g is the least accurate basis set tested, and least expensive to run.
 
-Other basis sets that meet threshold criteria are:nh4_cc-pvqz
-nh4_aug-cc-pvtz
-nh4_cc-pvtz
-nh4_6-311++g
-nh4_6-311+g
-nh4_6-311g
-nh4_aug-cc-pvdz
-nh4_cc-pvdz
-nh4_6-31++g
-nh4_6-31+g
-nh4_6-31g
-nh4_3-21++g
+Other basis sets that meet threshold criteria are:
+aug-cc-pvqz
+cc-pvqz
+aug-cc-pvtz
+cc-pvtz
+6-311++g
+6-311+g
+6-311g
+aug-cc-pvdz
+cc-pvdz
+6-31++g
+6-31+g
+6-31g

@@ -2,7 +2,7 @@
  title "{description}"
  charge {charge} 
 
- geometry units au  
+ geometry units au noautosym  
  {structure}
  end  
  basis  
